@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        p{
+           font-family: Orbitron; 
+           color: darkgreen;
+           font-size: 50px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 80px 80px 80px 80px;
+            column-gap: 20px;
+            row-gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        button{
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .last-button{
+            width: 200px;
+            letter-spacing: 4px;
+
+        }
+    </style>
+  </head>
+  <body>
+    <p class="js-paragraph"></p>
+    <div class="grid">
+        <button onclick="
+            updateCalculation('1');
+        ">1</button>
+        
+        <button onclick="
+            updateCalculation('2');
+        ">2</button>
+
+        <button onclick="
+            updateCalculation('3');
+        ">3</button>
+
+        <button onclick="
+            updateCalculation(' + ');
+        ">+</button>
+       
+        <button onclick="
+            updateCalculation('4');
+        ">4</button>
+        
+        <button onclick="
+            updateCalculation('5');
+        ">5</button>
+
+        <button onclick="
+            updateCalculation('6');
+        ">6</button>
+
+        <button onclick="
+            updateCalculation(' - ');
+        ">-</button>
+
+        <button onclick="
+            updateCalculation('7');
+        ">7</button>
+        
+        <button onclick="
+            updateCalculation('8');
+        ">8</button>
+
+        <button onclick="
+            updateCalculation('9');
+        ">9</button>
+
+        <button onclick="
+            updateCalculation(' * ');
+        ">*</button>
+
+        <button onclick="
+            updateCalculation('0');
+        ">0</button>
+        
+        <button onclick="
+            updateCalculation('.');
+        ">,</button>
+
+        <button onclick="
+            calculation = eval(calculation);
+            document.querySelector('.js-paragraph').innerHTML = calculation;
+            //console.log(calculation);
+        ">=</button>
+
+        <button onclick="
+            updateCalculation(' / ');
+        ">/</button>
+    </div>
+
+    <div>
+      <button class="last-button"
+      onclick="
+        calculation = '';
+        document.querySelector('.js-paragraph').innerHTML = calculation;
+        //console.log(calculation);
+      ">ӨШІРУ</button>
+    </div>
+
+   
+    <script>
+      let calculation = '';
+
+      function updateCalculation(value) {
+        calculation += value;
+        document.querySelector('.js-paragraph').innerHTML = calculation;
+        //console.log(calculation);
+      }
+    </script>
+  </body>
+</html>
