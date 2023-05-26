@@ -1,2 +1,2 @@
 # Practice
-My practice code with JavaScript
+Here I will upload my code practicing JavaScript
